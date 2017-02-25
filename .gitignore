@@ -1,3 +1,7 @@
 # ignore minified CSS file/s
 assets/css/main.min.css
 assets/css/ccss.min.css
+
+# ignore minified JS file/s
+assets/js/ffo-combined.js
+assets/js/main.min.js

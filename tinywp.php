@@ -25,6 +25,8 @@ add_action( 'wp_footer', 'tinywp_dequeue_footer_scripts' );
 // make sure the following has highest possible priority
 add_action( 'wp_enqueue_scripts', 'tinywp_dequeue_header_scripts', 30 );
 
+add_action( 'wp_enqueue_scripts', 'tinywp_enqueue_helper_scripts', 30 );
+
 // let's load helper (script) functions and critical css in the head
 function tinywp_head() {
     // critical css
@@ -66,7 +68,7 @@ function tinywp_head() {
         echo $maincss;
         echo $fontcss;
         echo "<script>document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );</script>";
-        echo "<script async type='text/javascript'>$cjs</script>";
+        // echo "<script async type='text/javascript'>$cjs</script>";
 
     }
 }
@@ -117,3 +119,17 @@ function tinywp_dequeue_header_scripts() {
         }
     }
 }
+
+function tinywp_enqueue_helper_scripts() {
+    wp_enqueue_script( 'loadcss', plugin_dir_url( __FILE__  ) . 'assets/js/loadCSS-1.3.1.min.js', array(), null, false  );
+    wp_enqueue_script( 'loadcss-preload', plugin_dir_url( __FILE__  ) . 'assets/js/cssrelpreload-1.3.1.min.js', array(), null, false  );
+    wp_enqueue_script( 'ffo-combined', plugin_dir_url( __FILE__  ) . 'assets/js/ffo-combined.js', array(), null, false  );
+}
+
+// https://allenmoore.me/filtering-html-script-tags-with-script_loader_tag/
+add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
+    if( 'loadcss' == $handle !! 'loadcss-preload' == $handle || 'ffo-combined' == $handle ) {
+        $tag = str_replace( ' src', ' async src', $tag );
+    }
+    return $tag;
+}, 10, 3);
