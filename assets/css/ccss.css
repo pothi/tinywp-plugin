@@ -6,11 +6,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-.custom-header-media:before,
-.wrap:after {
-  content: "";
-}
-
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -378,75 +373,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
   vertical-align: middle;
 }
 
-.has-header-image.twentyseventeen-front-page .custom-header {
-  display: table;
-  height: 300px;
-  height: 75vh;
-  width: 100%;
-}
-
-.custom-header-media {
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
-
-.custom-header-media:before {
-  background: -moz-linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 75%,rgba(0,0,0,.3) 100%);
-  background: -webkit-linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 75%,rgba(0,0,0,.3) 100%);
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 75%,rgba(0,0,0,.3) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0);
-  bottom: 0;
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: 2;
-}
-
-.has-header-image .custom-header-media img {
-  position: fixed;
-  height: auto;
-  left: 50%;
-  max-width: 1000%;
-  min-height: 100%;
-  min-width: 100%;
-  min-width: 100vw;
-  width: auto;
-  top: 50%;
-  padding-bottom: 1px;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-@supports (object-fit:cover) {
-  .has-header-image .custom-header-media img {
-    height: 100%;
-    left: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    top: 0;
-    -ms-transform: none;
-    -moz-transform: none;
-    -webkit-transform: none;
-    transform: none;
-    width: 100%;
-  }
-}
-
-.has-header-image.twentyseventeen-front-page .site-branding {
-  display: table-cell;
-  height: 100%;
-  vertical-align: bottom;
-}
-
 img {
   height: auto;
   max-width: 100%;
@@ -498,30 +424,6 @@ img {
 
   .site-branding {
     margin-bottom: 0;
-  }
-
-  .has-header-image.twentyseventeen-front-page .site-branding {
-    bottom: 0;
-    display: block;
-    left: 0;
-    height: auto;
-    padding-top: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-  .has-header-image.twentyseventeen-front-page .custom-header {
-    display: block;
-    height: auto;
-  }
-
-  .custom-header-media {
-    height: 165px;
-    position: relative;
-  }
-
-  .twentyseventeen-front-page.has-header-image .custom-header-media {
-    position: relative;
   }
 
   .site-title {
@@ -612,20 +514,6 @@ img {
     width: 18px;
   }
 
-  .twentyseventeen-front-page.has-header-image .site-branding {
-    margin-bottom: 70px;
-  }
-
-  .twentyseventeen-front-page.has-header-image .custom-header-media {
-    height: 1200px;
-    height: 100vh;
-    max-height: 100%;
-    overflow: hidden;
-  }
-
-  .twentyseventeen-front-page.has-header-image .custom-header-media:before {
-    height: 33%;
-  }
 }
 
 @media screen and (min-width:67em) {
