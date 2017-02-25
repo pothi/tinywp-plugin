@@ -128,7 +128,7 @@ function tinywp_enqueue_helper_scripts() {
 
 // https://allenmoore.me/filtering-html-script-tags-with-script_loader_tag/
 add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
-    if( 'loadcss' == $handle !! 'loadcss-preload' == $handle || 'ffo-combined' == $handle ) {
+    if( 'loadcss' == $handle || 'loadcss-preload' == $handle || 'ffo-combined' == $handle ) {
         $tag = str_replace( ' src', ' async src', $tag );
     }
     return $tag;
