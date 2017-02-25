@@ -121,9 +121,9 @@ function tinywp_dequeue_header_scripts() {
 }
 
 function tinywp_enqueue_helper_scripts() {
-    wp_enqueue_script( 'loadcss', plugin_dir_url( __FILE__  ) . 'assets/js/loadCSS-1.3.1.min.js', array(), null, false  );
-    wp_enqueue_script( 'loadcss-preload', plugin_dir_url( __FILE__  ) . 'assets/js/cssrelpreload-1.3.1.min.js', array(), null, false  );
-    wp_enqueue_script( 'ffo-combined', plugin_dir_url( __FILE__  ) . 'assets/js/ffo-combined.js', array(), null, false  );
+    wp_enqueue_script( 'loadcss', plugin_dir_url( __FILE__  ) . 'assets/js/loadCSS-1.3.1.min.js', array(), null, true  );
+    wp_enqueue_script( 'loadcss-preload', plugin_dir_url( __FILE__  ) . 'assets/js/cssrelpreload-1.3.1.min.js', array(), null, true  );
+    wp_enqueue_script( 'ffo-combined', plugin_dir_url( __FILE__  ) . 'assets/js/ffo-combined.js', array(), null, true  );
 }
 
 // https://allenmoore.me/filtering-html-script-tags-with-script_loader_tag/
