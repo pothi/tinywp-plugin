@@ -1,2 +1,3 @@
-# ignore minified CSS file
+# ignore minified CSS file/s
 assets/css/main.min.css
+assets/css/ccss.min.css
