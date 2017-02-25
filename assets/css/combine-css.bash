@@ -1,4 +1,4 @@
-style.css
+#!/bin/bash
 
 # make sure you check the diff of the following
 # https://future.tinywp.in/wp-content/plugins/contact-form-7/includes/css/styles.css
