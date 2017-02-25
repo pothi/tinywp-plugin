@@ -20,3 +20,5 @@ cat \
     >> main.js
 
 echo 'hljs.initHighlightingOnLoad();' >> main.js
+
+uglifyjs main.js -o main.min.js
