@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Tiny WordPress Optimizer
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Pothi Kalimuthu
  * Author URI: https://www.tinywp.in
  * Plugin URI: https://www.github.com/pothi
@@ -10,6 +10,9 @@
 
 /*
  * Changelog
+ * 1.0.2
+ * - date: 2017-Feb-25
+ * - we no longer needs parent themes CSS as it is overridden by child theme's
  * 1.0.1
  *  - disabled hightlight-prismatic-core javascript that is already included in main.min.js
  *  - included the inline script belongs to highlight-prismatic
@@ -101,8 +104,6 @@ function tinywp_dequeue_header_scripts() {
         // https://wordimpress.com/removing-styles-scripts-from-your-wordpress-parent-theme/
         wp_dequeue_style('twentyseventeen-style');
         wp_deregister_style('twentyseventeen-style');
-        wp_dequeue_style('child-style');
-        wp_deregister_style('child-style');
 
         wp_dequeue_style('twentyseventeen-fonts');
         wp_deregister_style('twentyseventeen-fonts');
