@@ -38,6 +38,7 @@ function tinywp_head() {
                 <noscript><link rel='stylesheet' id='main-style-css'  href='$maincss_url' type='text/css' media='all' /></noscript>";
 
     $fontcss_url = "https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext";
+    $fontcss_url = "https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,400i,800";
     $fontcss = "<link rel='preload' href='$fontcss_url' as='style' onload=\"this.rel='stylesheet'\" />
                     <noscript><link rel='stylesheet' id='twentyseventeen-fonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' /></noscript>";
 
