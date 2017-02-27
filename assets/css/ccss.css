@@ -269,6 +269,40 @@ body {
   margin-bottom: 0;
 }
 
+.twentyseventeen-front-page .site-content {
+  padding: 0;
+}
+
+.twentyseventeen-panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.panel-image:before {
+  background: -webkit-linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.3)));
+  background: -webkit-linear-gradient(to top,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.3) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 100px;
+}
+
+.panel-content {
+  position: relative;
+}
+
 body:not(.title-tagline-hidden) .site-branding-text {
   display: inline-block;
   vertical-align: middle;
@@ -414,6 +448,71 @@ body:not(.title-tagline-hidden) .site-branding-text {
     height: 18px;
     width: 18px;
   }
+
+  .panel-content .wrap {
+    padding-bottom: 4.5em;
+    padding-top: 6em;
+  }
+
+  .panel-image {
+    height: 100vh;
+    max-height: 1200px;
+  }
+
+  .page-two-column .panel-content .entry-header {
+    float: left;
+    width: 36%;
+  }
+
+  .page-two-column .panel-content .entry-content {
+    float: right;
+    width: 58%;
+  }
+
+  .site-content {
+    padding: 5.5em 0 0;
+  }
+
+  .page .entry-title {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+	
+  body.page-two-column:not(.archive) #primary .entry-header {
+    float: left;
+    width: 36%;
+  }
+
+  body.page-two-column:not(.archive) #primary .entry-content {
+    float: right;
+    width: 58%;
+  }
+	.page-two-column .panel-content .recent-posts {
+		clear: right;
+		float: right;
+		width: 58%;
+	}
+
+	.panel-content .recent-posts article {
+		margin-bottom: 4em;
+	}
+
+	.panel-content .recent-posts .entry-header,
+	.page-two-column #primary .panel-content .recent-posts .entry-header,
+	.panel-content .recent-posts .entry-content,
+	.page-two-column #primary .panel-content .recent-posts .entry-content {
+		float: none;
+		width: 100%;
+	}
+
+	.panel-content .recent-posts .entry-header {
+		margin-bottom: 1.5em;
+	}
+
+	.page .panel-content .recent-posts .entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
 
 }
 
